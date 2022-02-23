@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>ViaMia</title>
+            <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    
+            <style>
+                .padblock {
+                    padding: 8px;
+                    display: block;
+                }
+
+                .width-full {
+                    width: 100%;
+                }
+            </style>
+
+    </head>
+    <body>
+            <main class="container">
+                <hgroup>
+                    <h2>ViaMia 🤌🏻</h2>
+                    <h3>Easily use your own keyboards in VIA for <kbd>QMK</kbd>.</h3>
+                </hgroup>
+                <p>
+                    ViaMia is patcher and alternative keyboards database for <a href="https://caniusevia.com/" target="_blank" rel="noreferer noopener">VIA</a>.
+                    It allows you to override the official VIA database with our open source one that actually adds new keyboards.
+                </p>
+                <a href="start" role="button">Just get me started</a>
+
+                <h4>Why create ViaMia?</h4>
+                <p>
+                    In the custom mechanical keyboard community <a href="https://qmk.fm" target="_blank" rel="noreferer noopener">QMK</a> is king. VIA is an elegant realtime configurator for QMK allowing you to change your keyboard's behavior on the fly.
+                    However, VIA has a few flaws:
+                    <ol>
+                        <li>The app is closed source</li>
+                        <li>The keyboard repository has no license (meaning it is copyrighted by many people)</li>
+                        <li>Getting keyboards merged into the repository takes ages</li>
+                        <li>It restricts itself to keyboards in the official QMK repository</li>
+                        <li>If your keyboard is not in the VIA database, you have to manually load your config every time you use VIA</li>
+                    </ol>
+                </p>
+                <p>
+                    ViaMia aims to solve all these problems in an open source friendly way.
+                    At the core is the <a href="#patcher">ViaMia Patcher</a> that changes the database used by VIA to an unofficial one.
+                    We host our own database in the <a href="#keyboards">ViaMia keyboards repository</a>.
+                </p>
+
+                <h4 id="patcher">ViaMia Patcher 🩹</h4>
+                <p>
+                    Our <a href="https://github.com/ViaMia/ViaMia-Patcher" target="_blank">patcher</a> for VIA changes the data source used by VIA to any other URL.
+                    The only requirement is that this URL hosts a <code>keyboards.v2.json</code> file compatible with the official VIA one.
+                </p>
+                <p>
+                    The patcher qualifies as an <i>unofficial patch</i><sub><a href="https://en.wikipedia.org/wiki/Unofficial_patch" target="_blank" rel="noreferer noopener">wiki</a></sub> to closed source software, meaning it is fully legal. We do not redistribute VIA binaries.
+                </p>
+
+                <h4 id="keyboards">ViaMia Keyboards ⌨️</h4>
+                <p>
+                    Our <a href="https://github.com/ViaMia/ViaMia-Keyboards" target="_blank">keyboards repository</a> holds a database of additional keyboards that work with VIA but are not in the official VIA database.
+                    When you've patched your VIA installation with our keyboard database, you, or <abbr title="Anyone using ViaMia">anyone</abbr> with the same keyboard, will no longer need to load the config JSON manually every time VIA is opened.
+                </p>
+                <p>
+                    The repository automatically checks if your VID/PID combination is unique. If that is the case, a maintainer will likely merge your keymap within hours. We hope to have an online VID/PID checker soon so you can avoid conflicts in the first place.
+                </p>
+                <p>
+                    A contributers guide is coming soon.
+                </p>
+                <p>
+                    <mark class="padblock">Note: VIA requires unique VID/PID combinations. We may require you to change your VID/PID in your QMK keymap to avoid conflicts.</mark>
+                </p>
+
+                <a role="button" class="width-full" href="start">Start using ViaMia</a>
+            </main>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>ViaMia - Get started</title>
+            <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    
+            <style>
+                .width-full {
+                    width: 100%;
+                }
+
+                ol.primary-list {
+                    counter-reset: list-counter;
+                    list-style-type: none;
+                }
+
+                ol.primary-list li {
+                    counter-increment: list-counter;
+                }
+
+                ol.primary-list li::before {
+                    content: counter(list-counter);
+                    border-radius: 100%;
+                    background-color: #1095c1;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    margin-right: 1em;
+                    text-align: center;
+                    padding: 0.25em;
+                }
+            </style>
+
+    </head>
+    <body>
+            <main class="container">
+                <hgroup>
+                    <h2>ViaMia 🤌🏻</h2>
+                    <h3>Easily use your own keyboards in VIA for <kbd>QMK</kbd>.</h3>
+                </hgroup>
+                
+                <a href="/" class="secondary">← Back</a>
+                <h4>Start using ViaMia</h4>
+                
+                <ol class="primary-list">
+                    <li>Download and install VIA from the official website if you haven't already.</li>
+                    <li><b>If you have NodeJS installed:</b> run the ViaMia Patcher using <code>npx viamia</code>.</li>
+                    <li><b>If you don't:</b> download ViaMia for Windows, MacOS, Linux.</li>
+                    <li>Enjoy! Feel free to <a href="#TODO">contribute</a>.</li>
+                </ol>
+            </main>
+    </body>
+</html>
